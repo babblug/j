@@ -1,0 +1,19 @@
+class ConsOL
+{
+int num;
+ConsOL()
+{
+System.out.println("Constructor without arguments called");
+}
+ConsOL(int no)
+{
+System.out.println("Constructor with arguments called");
+this.num=no;
+System.out.println("value is"+num)
+}
+public static void main(String args[])
+{
+Cons0L x1=new ConsOL();
+Cons0L x2=new ConsOL(5);
+}
+}
