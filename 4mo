@@ -1,0 +1,17 @@
+class MethOL
+{
+void sum(int a,int b)
+{
+System.out.println("sum:"+(a+b));
+}
+void sum(int a,int b,int c)
+{
+System.out.println("sum:"+(a+b+c));
+}
+public static void main(String args[])
+{
+MethOL ob=new MethOL();
+ob.sum(2,3);
+ob.sum(1,3,5);
+}
+}
