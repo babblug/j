@@ -1,0 +1,30 @@
+import java.awt.*;
+ zximport java.awt.event.*;
+import java.applet.*;
+public class DisplayXY extends Applet implements MouseMotionListener
+{
+int x,y;
+String str="";
+public void init()
+{
+addMouseMotionListener(this);
+}
+public void mouseDragged(MouseEvent me)
+{
+x = me.getX();
+y = me.getY();
+str = "Mouse Dragged "+x+" , "+y;
+repaint();
+}
+public void mouseMoved(MouseEvent me)
+{
+x = me.getX();
+y = me.getY();
+str = "Mouse Moved "+x+" , "+y;
+repaint();
+}
+public void paint(Graphics g)
+{
+g.drawString(str, x, y);
+}
+}
