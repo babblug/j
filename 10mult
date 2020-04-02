@@ -1,0 +1,57 @@
+class GoodMorning extends Thread
+{
+public void run()
+{
+for(int i=0;i<10;i++)
+{
+try{
+Thread.sleep(1000);
+}
+catch(Exception e){}
+System.out.println("GoodMorning");
+}
+}
+}
+class Hello extends Thread
+{
+public void run()
+{
+for(int i=0;i<10;i++)
+{
+try{
+Thread.sleep(2000);
+}
+catch(Exception e){}
+System.out.println("Hello");
+}
+}
+}
+class Welcome extends Thread
+{
+public void run()
+{
+for(int i=0;i<10;i++)
+{
+try{
+Thread.sleep(3000);
+}
+catch(Exception e){}
+System.out.println("Welcome");
+}
+}
+}
+class ThreadDemo
+{
+public static void main(String[] args)
+{
+GoodMorning gm=new GoodMorning();
+Thread t1=new Thread(gm);
+Hello hl=new Hello();
+Thread t2=new Thread(hl);
+Welcome wc=new Welcome();
+Thread t3=new Thread(wc);
+t1.start();
+t2.start();
+t3.start();
+}
+}
