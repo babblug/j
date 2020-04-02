@@ -1,0 +1,21 @@
+class A
+{
+void fun()
+{
+System.out.println("overrided method");
+}
+}
+class B extends A
+{
+void fun()
+{
+System.out.println("overrided method called");
+}
+public static void main(String args[])
+{
+A obj=new A();
+obj.fun();
+A obj=new B();
+obj.fun();
+}
+}
