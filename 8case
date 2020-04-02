@@ -1,0 +1,7 @@
+Runtime Polymorphism (or Dynamic polymorphism) It is also known as Dynamic Method Dispatch. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, that’s why it is called runtime polymorphism. I have already discussed method overriding in detail in a separate tutorial, refer it: Method Overriding in Java.
+In this previous example we have three classes Bank, SBI and AXIS. Bank is a parent
+class and SBI and AXIS are child classes. The child classes are overriding the method
+interest() of parent class. In this previous example we have child class object assigned to
+the parent class reference so in order to determine which method would be called, the type of
+the object would be determined at run-time. It is the type of object that determines which
+version of the method would be called (not the type of reference)
