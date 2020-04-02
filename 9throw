@@ -1,0 +1,15 @@
+import java.util.*;
+class ThrowException
+{
+public static void main(String[] args)
+{
+try{
+System.out.println("WELCOME");
+throw new NullPointerException("Exception Data");
+}
+catch(NullPointerException ne)
+{
+System.out.println(ne);
+}
+}
+}
