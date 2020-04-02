@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class MyException extends Exception
+{
+MyException(String str)
+{
+super(str);
+}
+}
+class ExceptionDemo
+{
+public static void main(String[] args)
+{
+try{
+System.out.println("WELCOME");
+System.out.print("Enter amount to withdraw: ");
+Scanner sc=new Scanner(System.in);
+double bal=sc.nextDouble();
+if(bal>25000)
+{
+MyException me=new MyException("Balance is very
+high");
+throw me;
+}
+System.out.println("Balance is withdrawn");
+}
+catch(MyException me)
+{
+System.out.println(me);
+}
+}
+}
