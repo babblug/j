@@ -1,0 +1,28 @@
+interface Father
+{
+double HT=6.2;
+void height();
+}
+interface Mother
+{
+double HT=5.8;
+void color();
+}
+class Child implements Father, Mother
+{
+public void height()
+{
+double ht=(Father.HT+Mother.HT)/2;
+System.out.println("Child's Height= "+ht);
+}
+public void color()
+{
+System.out.println("Child Color= brown");
+}
+public static void main(String[] args)
+{
+Child c=new Child();
+c.height();
+c.color();
+}
+}
