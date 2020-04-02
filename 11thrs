@@ -1,0 +1,5 @@
+Synchronization:
+When thread is already acting on an object, preventing any other thread from acting on the same object is called Thread Synchronization or thread safe. Thread synchronization is recommended when multiple threads are used on the same object.
+In the above Producer-Consumer program we are synchronization on StringBuffer Object. In the Producer Thread sb.notify()method is sending a notification to the Consumer thread that the StringBuffer object sb is available, and it can be used now.
+Meanwhile, what the Consumer thread is doing? It is waiting for the notification that the StringBuffer object sb (of Producer class) is available. Here, there is no need of using
+sleep() method to go into sleep for some time wait() method stops waiting as soon as it receives the notification. So there is no time delay to receive the data from the Producer.
